@@ -1,6 +1,6 @@
 package com.genezeiniss.kafka.demo.concumer;
 
-import com.genezeiniss.kafka.demo.configuration.ConsumerProperties;
+import com.genezeiniss.kafka.configuration.ConsumerProperties;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;

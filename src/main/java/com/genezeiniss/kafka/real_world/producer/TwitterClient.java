@@ -15,12 +15,13 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 public class TwitterClient {
 
-    public TwitterClient() {}
+    private final String consumerKey = "EjzIRW8Zb7lIlZCMlooLw6eTY";
+    private final String consumerSecret = "t8E7tf4beuQeq6VyNaRffqC5OHQTl6CiQwiGFyTcPCQ8AUQih6";
+    private final String token = "1067768825532289029-hGyfLOI3USRMcPN1gdka2HQkGXYRzx";
+    private final String secret = "IHBahY2VjuLNtpkYEVVK8K8QLATWE1qlCSGsCNAXx0jtz";
 
-    private String consumerKey = "EjzIRW8Zb7lIlZCMlooLw6eTY";
-    private String consumerSecret = "t8E7tf4beuQeq6VyNaRffqC5OHQTl6CiQwiGFyTcPCQ8AUQih6";
-    private String token = "1067768825532289029-hGyfLOI3USRMcPN1gdka2HQkGXYRzx";
-    private String secret = "IHBahY2VjuLNtpkYEVVK8K8QLATWE1qlCSGsCNAXx0jtz";
+    public TwitterClient() {
+    }
 
     public Client buildClient(BlockingQueue<String> messageQueue) {
         return new ClientBuilder()
@@ -33,7 +34,7 @@ public class TwitterClient {
     }
 
     private StatusesFilterEndpoint setupTrackTerms() {
-        List<String> terms = Lists.newArrayList("blockchain");
+        List<String> terms = Lists.newArrayList("java", "kafka", "bitcoin", "politics", "sport");
         StatusesFilterEndpoint endpoint = new StatusesFilterEndpoint();
         endpoint.trackTerms(terms);
         return endpoint;
