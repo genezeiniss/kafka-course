@@ -1,6 +1,6 @@
-package com.genezeiniss.kafka.demo.concumer;
+package kafka.concumer;
 
-import com.genezeiniss.kafka.configuration.ConsumerProperties;
+import kafka.configuration.ConsumerProperties;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,12 +9,12 @@ import java.time.Duration;
 import java.util.Collections;
 import java.util.Properties;
 
-public class ConsumerDemoGroups {
+public class ConsumerDemo {
 
     public static void main(String[] args) {
-        Logger log = LoggerFactory.getLogger(ConsumerDemoGroups.class);
+        Logger log = LoggerFactory.getLogger(ConsumerDemo.class);
 
-        Properties properties = ConsumerProperties.consumeProperties("my-second-application");
+        Properties properties = ConsumerProperties.consumeProperties("my-first-application");
         KafkaConsumer<String, String> consumer = new KafkaConsumer<>(properties);
 
         // subscribe to list of topics

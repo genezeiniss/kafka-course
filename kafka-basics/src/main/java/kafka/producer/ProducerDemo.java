@@ -1,6 +1,6 @@
-package com.genezeiniss.kafka.demo.producer;
+package kafka.producer;
 
-import com.genezeiniss.kafka.configuration.ProducerProperties;
+import kafka.configuration.ProducerProperties;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 
