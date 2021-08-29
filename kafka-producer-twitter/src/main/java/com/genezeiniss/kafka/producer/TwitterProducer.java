@@ -1,4 +1,4 @@
-package kafka.producer;
+package com.genezeiniss.kafka.producer;
 
 import com.twitter.hbc.core.Client;
 import io.vavr.control.Try;

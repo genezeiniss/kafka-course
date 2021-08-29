@@ -1,4 +1,4 @@
-package kafka.configuration;
+package com.genezeiniss.kafka.configuration;
 
 import org.apache.kafka.common.serialization.StringSerializer;
 

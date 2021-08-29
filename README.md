@@ -1,9 +1,9 @@
 ###To start working on CLI:
 1. start __zookeeper__:
-   1. $ cd Kafka_2.13-2.8.0
+   1. $ cd kafka_2.13-2.8.0
    2. $ bin/zookeeper-server-start.sh config/zookeeper.properties
 2. start __Kafka__ in a new window
-   1. $Kafka-server-start.sh config/server.properties
+   1. $kafka-server-start.sh config/server.properties
 
 #Kafka Theory
 ##Topics, Partitions and Offsets

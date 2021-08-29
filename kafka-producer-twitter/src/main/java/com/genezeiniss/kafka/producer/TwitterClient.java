@@ -1,4 +1,4 @@
-package kafka.producer;
+package com.genezeiniss.kafka.producer;
 
 import com.google.common.collect.Lists;
 import com.twitter.hbc.ClientBuilder;
@@ -14,15 +14,16 @@ import java.util.concurrent.BlockingQueue;
 
 public class TwitterClient {
 
-    private final String consumerKey = "EjzIRW8Zb7lIlZCMlooLw6eTY";
-    private final String consumerSecret = "t8E7tf4beuQeq6VyNaRffqC5OHQTl6CiQwiGFyTcPCQ8AUQih6";
-    private final String token = "1067768825532289029-hGyfLOI3USRMcPN1gdka2HQkGXYRzx";
-    private final String secret = "IHBahY2VjuLNtpkYEVVK8K8QLATWE1qlCSGsCNAXx0jtz";
-
     public TwitterClient() {
     }
 
     public Client buildClient(BlockingQueue<String> messageQueue) {
+
+        String consumerKey = "EjzIRW8Zb7lIlZCMlooLw6eTY";
+        String consumerSecret = "t8E7tf4beuQeq6VyNaRffqC5OHQTl6CiQwiGFyTcPCQ8AUQih6";
+        String token = "1067768825532289029-hGyfLOI3USRMcPN1gdka2HQkGXYRzx";
+        String secret = "IHBahY2VjuLNtpkYEVVK8K8QLATWE1qlCSGsCNAXx0jtz";
+
         return new ClientBuilder()
                 .name("Twitter-Client-01")
                 .hosts(new HttpHosts(Constants.STREAM_HOST))
