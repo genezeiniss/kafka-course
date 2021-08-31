@@ -164,3 +164,10 @@ The default partition formula:
 __targetPartition = Utils.abs(Utils.murmur2(record.key())) % numPartitions__  → this means that same key will go to the same partition, and
 adding partitions to a topic will completely alter the formula.
 
+# Delivery Semantic
+
+## At Most Once
+
+Offsets are committed as soon as the message batch is received. If the processing goes wrong, the message will be lost (it won't be read
+again).
+
